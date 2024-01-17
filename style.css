@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: sans-serif; */
+  color: white;
+}
+
+.body {
+  display: flex;
+  /* align-items: center;
+  justify-content : center; */
+  /* display: grid;
+  place-items: center; */
+}
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* Choose your background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the loading overlay is on top of other elements */
+  visibility: visible;
+  /* transition: opacity 0.5s ease-out, visibility 0.5s ease-out; Adjust the duration and easing function as needed */
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-message {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: #333; /* Choose your text color */
+}
+
+
+.logo {
+  position: absolute;
+  top: 5%;
+  background-image: url('Velocitylogo.png');
+  mix-blend-mode:lighten;
+  height: 600px;
+  width: 600px;
+  background-size: cover;
+  z-index: 2;
+}
+
+.back-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.BContainer {
+  margin: 30px 0px 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+/* #Button {
+  cursor:grab;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-decoration: none;
+  font-family: poppins;
+  color: white;
+  font-weight: 800;
+  font-size: 28px;
+  position: relative;
+  border-radius: 100px;
+  height: 50px;
+  width: 300px;
+  z-index: 4;
+  transition: all 0.2s ease-in-out;
+} */
+
+/* #Button {
+  cursor: grab;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-decoration: none;
+  font-family: poppins;
+  color: white;
+  font-weight: 800;
+  font-size: 28px;
+  position: relative;
+  border-radius: 100px;
+  height: 50px;
+  width: 300px;
+  z-index: 4;
+  transition: all 0.2s ease-in-out;
+} */
+
+/* .wheel {
+  position: relative;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  transform: translateX(-100%);
+  transition: transform 0.8s ease-in-out;
+  z-index: 5;
+} */
+
+/* #Button.clicked .wheel {
+  transform: translateX(650%);
+} */
+
+.warn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  z-index: 2;
+}
+
+.warn p {
+  font-family: "poppins";
+  font-weight: 400;
+  width: 1000px;
+}
+
+.contact {
+  font-family: poppins;
+  font-size: small;
+  /* top: 30px; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  height: 80px;
+  width: 100%;
+  align-self: baseline;
+}
+.contact p{
+  height: 80px;
+  width: fit-content;
+}
+
+.text2 {
+  width: 600px;
+}
+
+
+.black-mask {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.461);
+
+}
+
+
+/* #Button:hover {
+  font-size: 30px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.757);
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.51);
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  transform: scale(1.10);
+} */
+
+.cta {
+  position: relative;
+  z-index: 3;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #a6a6a6;
+  width: 65px;
+  height: 65px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  z-index: 3;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #000000;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.cta svg {
+  position: relative;
+  z-index: 2;
+  top: 3.5px;
+  margin-left: -4px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #ead706f7;
+  stroke-width: 2;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #fff;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+.spinner {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+}
+
+/* .spinner div {
+  position: absolute;
+  width: 50%;
+  height: 150%;
+  background: #000000;
+  transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
+}
+
+.spinner div:nth-child(1) {
+  --delay: 0.1;
+  --rotation: 36;
+  --translation: 150;
+}
+
+.spinner div:nth-child(2) {
+  --delay: 0.2;
+  --rotation: 72;
+  --translation: 150;
+}
+
+.spinner div:nth-child(3) {
+  --delay: 0.3;
+  --rotation: 108;
+  --translation: 150;
+}
+
+.spinner div:nth-child(4) {
+  --delay: 0.4;
+  --rotation: 144;
+  --translation: 150;
+}
+
+.spinner div:nth-child(5) {
+  --delay: 0.5;
+  --rotation: 180;
+  --translation: 150;
+}
+
+.spinner div:nth-child(6) {
+  --delay: 0.6;
+  --rotation: 216;
+  --translation: 150;
+}
+
+.spinner div:nth-child(7) {
+  --delay: 0.7;
+  --rotation: 252;
+  --translation: 150;
+}
+
+.spinner div:nth-child(8) {
+  --delay: 0.8;
+  --rotation: 288;
+  --translation: 150;
+}
+
+.spinner div:nth-child(9) {
+  --delay: 0.9;
+  --rotation: 324;
+  --translation: 150;
+}
+
+.spinner div:nth-child(10) {
+  --delay: 1;
+  --rotation: 360;
+  --translation: 150;
+}
+
+@keyframes spinner-fzua35 {
+  0%, 10%, 20%, 30%, 50%, 60%, 70%, 80%, 90%, 100% {
+    transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  }
+
+  50% {
+    transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+  }
+} */
+
+

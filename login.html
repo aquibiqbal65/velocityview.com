@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Animation CSS | Codehal</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+
+<body>
+
+    <video autoplay loop muted plays-inline class="back-video">
+    </video>
+    <div class="black-mask">
+    </div>
+
+    <div class="login-light"></div>
+    <div style="filter: blur(10px);" class="login-box">
+        <form action="#">
+            <input type="checkbox" class="input-check" id="input-check">
+            <label for="input-check" class="toggle">
+                <span class="text off">off</span>
+                <span class="text on">on</span>
+            </label>
+            <div class="light"></div>
+
+            <h2>Login</h2>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label>Email</label>
+                <div class="input-line"></div>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" required>
+                <label>Password</label>
+                <div class="input-line"></div>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Array of video URLs
+            var videoUrls = [
+                'Random1.mp4',
+                'Random2.mp4',
+                'Random3.mp4',
+                'Random4.mp4',
+                // Add more video URLs as needed
+            ];
+  
+            // Get a random video URL
+            var randomVideoUrl = videoUrls[Math.floor(Math.random() * videoUrls.length)];
+  
+            // Set the video source for the element with class "back-video"
+            var backVideoElement = document.querySelector('.back-video');
+            backVideoElement.innerHTML = '<source src="' + randomVideoUrl + '" type="video/mp4">';
+        });
+    </script>
+</body>
+
+</html>

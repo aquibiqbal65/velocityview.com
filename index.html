@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velocityveiw.com</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading-overlay loading-overlay.hidden">
+      <div class="spinner">
+        <div></div>   
+        <div></div>    
+        <div></div>    
+        <div></div>    
+        <div></div>    
+        <div></div>    
+        <div></div>    
+        <div></div>    
+        <div></div>    
+        <div></div>    
+      </div>
+    </div>
+    
+    <video autoplay loop muted plays-inline class="back-video">
+    </video>
+
+    <div class="black-mask">
+    </div>
+
+    <div class="overlay">
+      <div class="logo">
+      </div>
+    </div>
+<!-- <div class="BContainer">
+    <a id="Button" href="login.html">READY TO RACE</a>
+  </div> -->
+  <!-- <div class="BContainer">
+    <a id="Button" href="#" onclick="startRace()">
+      READY TO RACE
+      <div class="wheel">
+        <img style="width: 50px; height:50px" src="wheel.png" alt="wheel">
+      </div>
+    </a> -->
+    <div class="BContainer">
+    <button class="cta" type="button">
+      <span>READY TO RACE</span>
+      <svg width="35px" height="30px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </button>
+  </div>
+</div>
+      <!-- <div class="enter2">
+            <h2><a href="#">JOIN NOW</a></h2>
+        </div>
+     -->
+    </div>
+    <div class="warn">
+      <div class="text">
+        <p style="text-align: center">
+          <span style="font-family: fantasy;font-size : 20px;">WARNING :</span>  Ahead lay visual images, audio sounds, and verbal
+          descriptions of a sexually oriented and frankly erotic nature. This
+          site was designed to be used and viewed solely by people who are at
+          least eighteen (18) years of age or who are otherwise legally
+          considered to be of adult age in the community in which they live. If
+          you are not considered to be of adult age as determined by the
+          community in which you live or find such material offensive in nature
+          and don't want to be exposed to such material, you must leave now.
+          Click here to exit!
+        </p>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="contact">
+        <div class="text2">
+          <p style="text-align: center">
+            Support | Business Inquires | Terms | Privacy | Report Content |
+            Webmasters 18 U.S.C. 2257 Record-Keeping Requirements Compliance
+            Statement Copyright © 2024 Velocityveiw.com, All Rights Reserved
+          </p>
+        </div>
+      </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Display loading overlay
+        showLoadingOverlay();
+      
+        // Array of video URLs
+        var videoUrls = [
+          'Random1.mp4',
+          'Random2.mp4',
+          'Random3.mp4',
+          'Random4.mp4',
+          // Add more video URLs as needed
+        ];
+      
+        // Get a random video URL
+        var randomVideoUrl = videoUrls[Math.floor(Math.random() * videoUrls.length)];
+      
+        // Set the video source for the element with class "back-video"
+        var backVideoElement = document.querySelector('.back-video');
+        backVideoElement.innerHTML = '<source src="' + randomVideoUrl + '" type="video/mp4">';
+      
+        // Hide loading overlay after 3 seconds
+        setTimeout(hideLoadingOverlay, 3000);
+      });
+      
+      function showLoadingOverlay() {
+        var loadingOverlay = document.querySelector('.loading-overlay');
+        loadingOverlay.style.display = 'flex';
+      }
+      
+      function hideLoadingOverlay() {
+        var loadingOverlay = document.querySelector('.loading-overlay');
+        loadingOverlay.style.display = 'none';
+      }
+      
+  </script>
+  </body>
+</html>
