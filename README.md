@@ -6,7 +6,6 @@
 
 - **Stunning Visual Design:** Utilizes advanced CSS3 techniques to create a visually engaging user experience that captures the essence of automotive excellence.
 - **Responsive Layout:** Ensures a seamless viewing experience across all devices, from desktops to mobile phones.
-- **Dynamic Content Structure:** Offers well-organized sections that provide users with easy navigation through various topics such as upcoming car events, featured models, and latest industry news.
 
 ## Built With
 
