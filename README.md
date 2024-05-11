@@ -28,6 +28,6 @@ To run this project, you'll need a basic environment with a web browser (e.g., G
    git clone https://github.com/yourusername/velocity-view.git
    
 **Contact**
-**Your Name** -
+**Aquib Iqbal** -
 
 **Project Link: https://github.com/yourusername/velocity-view**
